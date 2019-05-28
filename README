@@ -1,0 +1,7 @@
+eskimo v0.0.1 (development pre-alpha)
+===
+eskimo is not necessarily a package manager itself, but a manager of package managers.
+the goal of eskimo is to take package managers like "apt", "zypper", "dnf", "pacman", etc. and
+group them all together under one roof.
+===
+more on this when I get somewhere with it, probably later today.
