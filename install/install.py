@@ -96,6 +96,10 @@ def distro_check():
         src_dist = "arch_linux"
     elif user_dist.lower() == "opensuse":
         src_dist = "suse"
+    elif user_dist.lower() == "fedora":
+        src_dist = "rhel"
+    elif user_dist.lower() == "gentoo":
+        src_dist = "gentoo"
     #END
 
 #code

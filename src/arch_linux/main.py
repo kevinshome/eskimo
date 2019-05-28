@@ -60,7 +60,7 @@ class SJ:
     def help():
         #ASCII art from http://ascii.co.uk/art/eskimo
         print("""eskimo, the modern package manager (for pacman)
-v0.0.2 (Off-White)                                              (o)
+v0.1a (Gucci)                                                   (o)
                                                                (_|_)
                                                                 |||
 

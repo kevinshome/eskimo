@@ -11,3 +11,8 @@ Off-White (pre-alpha):
 0.0.2r2:
   - removed unnecessary files and imports
   - added install/uninstall support for zypper
+
+Gucci (alpha):
+0.1a:
+  - added install/uninstall support for rpm/dnf
+  - added install/uninstall support for portage

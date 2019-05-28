@@ -1,4 +1,4 @@
-eskimo v0.0.2 (development pre-alpha)
+eskimo v0.1a (alpha)
 ===
 eskimo is not necessarily a package manager itself, but a manager of package managers.
 the goal of eskimo is to take package managers like "apt", "zypper", "dnf", "pacman", etc. and
@@ -14,14 +14,13 @@ requirements:
   - python-pip (>=19.0.3, recommend 19.1.1)
     - pyinstaller (3.4)
 
-current package manager support: (goal is for all to have install/uninstall capabilities by v0.1a)
+current package manager support:
 
-apt/dpkg - [x]
-zypper - [x]
-pacman - [x]
-yay (AUR helper) - []
-dnf - []
-portage - []
+- apt/dpkg
+- zypper
+- pacman
+- dnf
+- portage
 
 current distro support:
 
@@ -29,3 +28,5 @@ current distro support:
 - Debian
 - Arch Linux
 - openSUSE
+- Fedora (not tested)
+- Gentoo Linux (not tested)
