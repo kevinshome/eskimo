@@ -6,3 +6,5 @@ Off-White (pre-alpha):
 0.0.2:
   - ported installer and main program from kevinshome/mantis
   - added install/uninstall support for apt/dpkg
+0.0.2r1:
+  - added install/uninstall support for pacman

@@ -12,7 +12,7 @@ current package manager support: (goal is for all to have install/uninstall capa
 
 apt/dpkg - [x]
 zypper - []
-pacman - []
+pacman - [x]
 yay (AUR helper) - []
 dnf - []
 portage - []
