@@ -1,7 +1,23 @@
-eskimo v0.0.1 (development pre-alpha)
+eskimo v0.0.2 (development pre-alpha)
 ===
 eskimo is not necessarily a package manager itself, but a manager of package managers.
 the goal of eskimo is to take package managers like "apt", "zypper", "dnf", "pacman", etc. and
 group them all together under one roof.
 ===
-more on this when I get somewhere with it, probably later today.
+so basically, instead of having to use different package managers across different distros,
+eskimo takes care of all of that translating for you, so you only have to deal with one dialect,
+and it's pretty simple.
+
+current package manager support: (goal is for all to have install/uninstall capabilities by v0.1a)
+
+apt/dpkg - [x]
+zypper - []
+pacman - []
+yay (AUR helper) - []
+dnf - []
+portage - []
+
+current distro support:
+
+- Ubuntu
+- Debian

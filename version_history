@@ -1,0 +1,8 @@
+eskimo version history
+===
+
+Off-White (pre-alpha):
+0.0.1 - initial version
+0.0.2:
+  - ported installer and main program from kevinshome/mantis
+  - added install/uninstall support for apt/dpkg
