@@ -92,8 +92,10 @@ def distro_check():
 
     if user_dist.lower() == "ubuntu" or user_dist.lower() == "debian":
         src_dist = "debian"
-    if user_dist.lower() == "arch":
+    elif user_dist.lower() == "arch":
         src_dist = "arch_linux"
+    elif user_dist.lower() == "opensuse":
+        src_dist = "suse"
     #END
 
 #code

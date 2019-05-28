@@ -8,10 +8,16 @@ so basically, instead of having to use different package managers across differe
 eskimo takes care of all of that translating for you, so you only have to deal with one dialect,
 and it's pretty simple.
 
+requirements:
+
+- python (>= 3.4.6, recommend 3.7)
+  - python-pip (>=19.0.3, recommend 19.1.1)
+    - pyinstaller (3.4)
+
 current package manager support: (goal is for all to have install/uninstall capabilities by v0.1a)
 
 apt/dpkg - [x]
-zypper - []
+zypper - [x]
 pacman - [x]
 yay (AUR helper) - []
 dnf - []
@@ -21,3 +27,5 @@ current distro support:
 
 - Ubuntu
 - Debian
+- Arch Linux
+- openSUSE

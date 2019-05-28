@@ -59,7 +59,7 @@ def arghandle():
 class SJ:
     def help():
         #ASCII art from http://ascii.co.uk/art/eskimo
-        print("""eskimo, the modern package manager (for apt/dpkg)
+        print("""eskimo, the modern package manager (for zypper)
 v0.0.2 (Off-White)                                              (o)
                                                                (_|_)
                                                                 |||
@@ -82,7 +82,7 @@ released by kevinshome""")
         install_pkg = sarg[sarg.index("install") + 1] #pkg to be installed
         print("Installing {0}".format(install_pkg))
 
-        os.system("apt install {0}".format(install_pkg))
+        os.system("zypper install {0}".format(install_pkg))
 
     def uninstall(): #uninstall a package
         sarg = sys.argv
@@ -92,7 +92,7 @@ released by kevinshome""")
         upkg = sarg[sarg.index("uninstall") + 1] #grab pkg to uninstall from sysargs
         print("Uninstalling " + upkg)
 
-        os.system("apt remove {0}".format(upkg))
+        os.system("zypper remove {0}".format(upkg))
     def stest(): #internet speed test
         #makes use of sivel's speedtest.net command line tool
         os.system("curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -")

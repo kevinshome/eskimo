@@ -27,8 +27,6 @@ sys.dont_write_bytecode = True
 #import sys for exit and args
 import sys
 import os
-import csv
-import distro as d
 
 #checker for root privs
 userenv = os.getenv("USER")
@@ -61,8 +59,8 @@ def arghandle():
 class SJ:
     def help():
         #ASCII art from http://ascii.co.uk/art/eskimo
-        print("""eskimo, the modern package manager (for apt/dpkg)
-v0.0.1 (Off-White)                                              (o)
+        print("""eskimo, the modern package manager (for pacman)
+v0.0.2 (Off-White)                                              (o)
                                                                (_|_)
                                                                 |||
 
