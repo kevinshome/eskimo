@@ -11,7 +11,7 @@ and it's pretty simple.
 requirements:
 
 - python (>= 3.4.6, recommend 3.7)
-  - python-pip (>=19.0.3, recommend 19.1.1)
+  - python3-pip (>=19.0.3, recommend 19.1.1)
     - pyinstaller (3.4)
 
 current package manager support:
@@ -27,6 +27,6 @@ current distro support:
 - Ubuntu
 - Debian
 - Arch Linux
-- openSUSE
+- openSUSE/SLES
 - Fedora (not tested)
 - Gentoo Linux (not tested)

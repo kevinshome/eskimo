@@ -34,15 +34,12 @@ def find_distro():
     except:
         exit("Sorry, your distribution could not be found :(\nAre you sure that you're using Linux?")
 
+        #finds distro name in /etc/os-release
     with open("/etc/os-release") as f:
-        dist_name = f.read().lower().split()[0]
-        dist_name = dist_name.replace("name=", "")
-        dist_name = dist_name.replace('"', '')
-
-    with open("/etc/os-release") as f:
-        dist_ver = f.read().lower().split()[10]
-        dist_ver = dist_ver.replace('"', '')
-        dist_ver = dist_ver.replace("version_id=", "")
+        dist_name = f.read().lower().split()[0] #split /etc/os-release into string bits and select the first one with name=*DISTRO*
+        dist_name = dist_name.replace("name=", "") #remove "name=" identifier
+        dist_name = dist_name.replace("pretty_", "") #because debian just HAS to be different
+        dist_name = dist_name.replace('"', '')#remove quotes around distro name
 
 
 if __name__ == "__main__":
@@ -50,4 +47,3 @@ if __name__ == "__main__":
 
     find_distro()
     print("Your distro is: " + dist_name)
-    print("Your version is: " + dist_ver)

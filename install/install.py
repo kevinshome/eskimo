@@ -89,22 +89,23 @@ def step4():
 def distro_check():
 
     global src_dist
+    db = user_dist.lower()
 
-    if user_dist.lower() == "ubuntu" or user_dist.lower() == "debian":
+    if db == "ubuntu" or db == "debian":
         src_dist = "debian"
-    elif user_dist.lower() == "arch":
+    elif db == "arch":
         src_dist = "arch_linux"
-    elif user_dist.lower() == "opensuse":
+    elif db == "opensuse" or db == "sles":
         src_dist = "suse"
-    elif user_dist.lower() == "fedora":
+    elif db == "fedora":
         src_dist = "rhel"
-    elif user_dist.lower() == "gentoo":
+    elif db == "gentoo":
         src_dist = "gentoo"
     #END
 
 #code
 clr()
-print("Welcome to the installer for eskimo v0.0.1 (Off-White)")
+print("Welcome to the installer for eskimo v0.1a (Gucci)")
 input("Press ENTER to begin installation...\n")
 
 distro_check()
