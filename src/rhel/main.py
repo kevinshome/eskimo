@@ -52,6 +52,12 @@ def arghandle():
             SJ.uninstall()
         elif carg == "-s" or carg == "--speedtest":
             SJ.stest()
+        elif carg == "upgrade":
+            os.system("dnf upgrade")
+        elif carg == "dist-upgrade":
+            os.system("dnf distro-sync")
+        elif carg == "search":
+            SJ.search()
         else:
             pass
 
@@ -71,6 +77,9 @@ v0.1a (Gucci)                                                   (o)
 [commands]
 install [PACKAGE]                       install a package
 uninstall [PACKAGE]                     uninstall a package
+upgrade                                 automatically upgrades upgradeable packages
+dist-upgrade                            similar to upgrade, but performs more complex upgrades (i.e. distro upgrades)
+search [PACKAGE]                        searches for package in available repositories and returns results
 
 released by kevinshome""")
         sys.exit()
@@ -96,6 +105,16 @@ released by kevinshome""")
     def stest(): #internet speed test
         #makes use of sivel's speedtest.net command line tool
         os.system("curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -")
+    def search():
+        sarg = sys.argv
+        if len(sarg) - 1 == sarg.index("search"):
+            print("No search target was specified\nPlease try again, or use -h for help")
+            sys.exit()
+        spkg = sarg[sarg.index("search") + 1] #grab pkg to search for
+        print("Searching for " + spkg)
+        print("Results:\n")
+
+        os.system("dnf search {0}".format(spkg))
 
 # below is the mantis makeshift argument parser
 # this may seem simple, but it came to me after about 3 mtn dew code reds

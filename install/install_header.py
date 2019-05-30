@@ -33,24 +33,23 @@ usage: sudo python install.py [args]
 [args]
 
 "--help", "-h"                                  show this message
-"--uninstall"                                   uninstall an existing mantis install
 
 "--no-dep-install"                              supress installing dependencies from PyPi
 "--no-build"                                    suppress building the binary executable
-"--no-req-files"                                supress creation of /usr/lib/eskimo and files inside
 "--no-move-exec"                                supress installation of executable to /usr/bin/
 
 released by kevinshome""")
         sys.exit()
-    if "--uninstall" in sys.argv:
+
+        #when the binary is the only file installed, there's no need to
+        #uninstall before recompiling and installing a new version
+    '''if "--uninstall" in sys.argv:
         uch = input("Are you sure you want to remove eskimo? (Y/n): ")
         if uch.lower() == "y" or uch == "":
             print("Removing executable from /usr/bin/")
             os.remove("/usr/bin/eskimo")
-            print("Remove directory tree from /usr/lib/")
-            shutil.rmtree("/usr/lib/eskimo")
             print("eskimo successfully uninstalled.")
             sys.exit()
         else:
             print("Uninstall Terminated.\nNo files have been changed.")
-            sys.exit()
+            sys.exit()'''

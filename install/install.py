@@ -35,11 +35,16 @@ import time
 import distro
 
 #test to see if install already exists
-if "--uninstall" not in sys.argv:
+
+#commented this out for the same reason as step3()
+#
+#when the binary is the only file installed, there's no need to
+#uninstall before recompiling and installing a new version
+'''if "--uninstall" not in sys.argv:
     exists = os.path.isfile("/usr/bin/eskimo")
     if exists:
         print("It looks as if an installation of eskimo exists already on this system (/usr/bin/eskimo)")
-        exit("You will need to uninstall any previous installations of eskimo before installing a new one")
+        exit("You will need to uninstall any previous installations of eskimo before installing a new one")'''
 
 #distro var set
 distro.find_distro()
@@ -111,12 +116,19 @@ distro_check()
 if "--no-dep-install" not in sys.argv:
     print("Gathering and installing dependencies")
     step1()
+
 if "--no-build" not in sys.argv:
     print("Building executable")
     step2()
-if "--no-req-files" not in sys.argv:
+
+#I commented this out because it was originally code from mantis
+#which needed a /usr/lib/*, but for right now, it isn't needed by eskimo.
+#However, i didn't want to delete the function because I very well
+#may implement it again in the future
+'''if "--no-req-files" not in sys.argv:
     print("Creating /usr/lib required files")
-    step3()
+    step3()'''
+
 if "--no-move-exec" not in sys.argv:
     print("Installing binary package")
     step4()
