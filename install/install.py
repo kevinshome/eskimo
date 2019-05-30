@@ -47,7 +47,7 @@ user_dist = distro.dist_name
 
 #root checker
 if os.geteuid() != 0:
-    exit("eskimo requires root priveleges to install\nRun 'sudo python install.py [...]'")
+    exit("eskimo requires root priveleges to install\nRun 'sudo python3 install.py [...]'")
 
 #argument checker from install_header
 sysarg_check()
@@ -99,8 +99,6 @@ def distro_check():
         src_dist = "suse"
     elif db == "fedora":
         src_dist = "rhel"
-    elif db == "gentoo":
-        src_dist = "gentoo"
     #END
 
 #code

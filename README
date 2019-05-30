@@ -20,7 +20,6 @@ current package manager support:
 - zypper
 - pacman
 - dnf
-- portage
 
 current distro support:
 
@@ -28,5 +27,4 @@ current distro support:
 - Debian
 - Arch Linux
 - openSUSE/SLES
-- Fedora (not tested)
-- Gentoo Linux (not tested)
+- Fedora
