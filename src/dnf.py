@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 #bytecode fucking sucks
 import sys
 sys.dont_write_bytecode = True

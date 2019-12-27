@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 #bytecode fucking sucks
 import sys
 sys.dont_write_bytecode = True
@@ -58,6 +59,8 @@ def arghandle():
             os.system("apt update && apt upgrade")
         elif carg == "dist-upgrade":
             os.system("apt update && apt dist-upgrade")
+        elif carg == "fix-install":
+            os.system("apt --fix-broken install")
         elif carg == "search":
             SJ.search()
         else:
@@ -83,6 +86,7 @@ update                                  sync and update repositories
 upgrade                                 same as update, but automatically upgrades upgradeable packages
 dist-upgrade                            similar to upgrade, but performs more complex upgrades (i.e. distro upgrades)
 search [PACKAGE]                        searches for package in available repositories and returns results
+fix-install                             fixes a previous broken installation
 
 released by kevinshome""")
         sys.exit()
