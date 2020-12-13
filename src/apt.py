@@ -25,15 +25,15 @@ sys.dont_write_bytecode = True
 #
 #main.py
 
-#import sys for exit and args
-import sys
 import os
+
+esk_version = open("eskkv", "r").read()
 
 #checker for root privs
 userenv = os.getenv("USER")
 if userenv != 'root':
     if len(sys.argv) > 1:
-        if "--noroot" not in sys.argv:
+        if "--noroot" not in sys.argv and sys.argv[2] != "--help":
             print("eskimo requires root privileges\nnext time, try 'sudo eskimo ...'")
             sys.exit()
 
@@ -70,8 +70,8 @@ def arghandle():
 class SJ:
     def help():
         #ASCII art from http://ascii.co.uk/art/eskimo
-        print("""eskimo, the modern package manager (for apt/dpkg)
-v0.1a (Gucci)                                                   (o)
+        print(f"""eskimo, the modern package manager (apt)
+v{esk_version}                                                   (o)
                                                                (_|_)
                                                                 |||
 

@@ -25,9 +25,9 @@ sys.dont_write_bytecode = True
 #
 #main.py
 
-#import sys for exit and args
-import sys
 import os
+
+esk_version = open("eskkv", "r").read()
 
 #checker for root privs
 userenv = os.getenv("USER")
@@ -66,8 +66,8 @@ def arghandle():
 class SJ:
     def help():
         #ASCII art from http://ascii.co.uk/art/eskimo
-        print("""eskimo, the modern package manager (for rpm/dnf)
-v0.1a (Gucci)                                                   (o)
+        print(f"""eskimo, the modern package manager (rpm/dnf)
+v{esk_version}                                                   (o)
                                                                (_|_)
                                                                 |||
 
