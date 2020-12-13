@@ -11,7 +11,7 @@ if os.path.exists("/usr/bin/apt"):
 
     if input("Y\\n").lower() != "n":
         shutil.copyfile("src/apt.py", "/usr/bin/eskimo")
-        os.chmod("/usr/bin/eskimo", stat.S_IXOTH)
+        os.chmod("/usr/bin/eskimo", stat.S_IRWXO)
     else:
         pass
 

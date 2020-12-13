@@ -13,6 +13,10 @@ Off-White (pre-alpha):
   - added install/uninstall support for zypper
 
 Gucci (alpha):
-0.1a:
+0.1rv0:
   - added install/uninstall support for rpm/dnf
   - added install/uninstall support for portage
+0.1rv1:
+  - added root check and chmodder to setup.py
+  - removed unnecessary sys re-import in src/*
+  - other minor changes
