@@ -19,4 +19,5 @@ Gucci (alpha):
 0.1rv1:
   - added root check and chmodder to setup.py
   - removed unnecessary sys re-import in src/*
+  - switch to MIT license
   - other minor changes

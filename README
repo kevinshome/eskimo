@@ -1,4 +1,7 @@
-eskimo v0.1a (alpha)
+eskimo v0.1rv1 (alpha)
+===
+eskimo is considered abandoned as of December 27, 2019. feel free to do whatever you want with it. i may 
+do minor commits here and there, but this project is, for the most part, deprecated.
 ===
 eskimo is not necessarily a package manager itself, but a manager of package managers.
 the goal of eskimo is to take package managers like "apt", "zypper", "dnf", "pacman", etc. and
