@@ -27,7 +27,7 @@ sys.dont_write_bytecode = True
 
 import os
 
-esk_version = open("eskkv", "r").read()
+esk_version = open("/etc/eskkv", "r").read()
 
 #checker for root privs
 userenv = os.getenv("USER")

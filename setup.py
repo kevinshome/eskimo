@@ -5,6 +5,8 @@ import os
 if os.getuid() != 0:
     exit("PrivilegeError: root access required...")
 
+shutil.copyfile("src/eskkv", "/etc/eskkv")
+
 if os.path.exists("/usr/bin/apt"):
 
     print("Setup has detected APT on your system, would you like to install eskimo for APT?")
